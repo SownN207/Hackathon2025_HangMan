@@ -30,7 +30,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Sidebar, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
+import { Sidebar, SidebarCollapse, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
 import { HiHome, HiPlusCircle, HiTrendingUp } from "react-icons/hi";
 
 export function SidebarComponent() {
@@ -43,15 +43,33 @@ export function SidebarComponent() {
     >
       <SidebarItems>
         <SidebarItemGroup>
-          <SidebarItem
-            href="/"
+          <SidebarCollapse
             icon={HiHome}
+            label="Home"
             className={`text-gray-700 hover:bg-blue-100 rounded-lg ${
               pathname === "/" ? "bg-blue-200 text-blue-800 font-semibold" : ""
             }`}
+            open={pathname === "/announcement" || pathname === "/events" || pathname === "/"}
           >
-            Home
-          </SidebarItem>
+            <SidebarItem
+              href="/announcement"
+              className={`text-sm text-gray-700 hover:bg-blue-100 rounded-lg ${
+                pathname === "/announcement"
+                  ? "bg-blue-200 text-blue-800 font-medium rounded-md" : ""
+              }`}
+            >
+              Announcement
+            </SidebarItem>
+            <SidebarItem
+              href="/events"
+              className={` text-sm text-gray-700 hover:bg-blue-100 rounded-lgm ${
+                pathname === "/events"
+                  ? "bg-blue-200 text-blue-800 font-medium rounded-md" : ""
+              }`}
+            >
+              Events
+            </SidebarItem>
+          </SidebarCollapse>
 
           <SidebarItem
             href="/create"

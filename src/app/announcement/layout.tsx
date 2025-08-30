@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
-import { SidebarComponent as Sidebar }  from "../components/sidebar/Sidebar"; // import your Sidebar component
+// import your Sidebar component
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -18,12 +18,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-screen`}>
-      <body className="flex h-full">
-        <aside className="w-64 bg-gray-100 p-4 sticky top-0 h-screen">
-          <Sidebar />
-        </aside>
-        <main className="flex-1 h-full">{children}</main>
+    <html lang="en" className={`${geist.variable}`}>
+      <body>
+        <div className="flex min-h-screen">
+          <main className="">{children}</main>
+        </div>
       </body>
     </html>
   );

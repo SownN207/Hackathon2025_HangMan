@@ -29,7 +29,7 @@ export default function NoteTaking() {
   };
 
   return (
-    <div className="fixed right-0 top-0 h-full w-80 bg-white shadow-lg flex flex-col">
+    <div className="right-0 top-0 h-full w-80 bg-white shadow-lg flex flex-col">
       <Card className="flex-1 flex flex-col">
         <CardHeader>
           <CardTitle>Notes</CardTitle>
