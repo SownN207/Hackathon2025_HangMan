@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Comment = {
@@ -8,7 +10,7 @@ type Comment = {
 };
 
 // In-memory storage
-let comments: Comment[] = [];
+const comments: Comment[] = [];
 
 export default function handler(
   req: NextApiRequest,
