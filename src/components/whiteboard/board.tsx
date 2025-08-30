@@ -14,8 +14,7 @@ const Excalidraw = dynamic(
 export function Board() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Excalidraw Example</h1>
-      <div style={{ height: "500px" }}>
+      <div style={{ height: "100%", width: "100%"}}>
         <Excalidraw />
       </div>
     </>
