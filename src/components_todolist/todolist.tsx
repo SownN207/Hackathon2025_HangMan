@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
@@ -76,10 +78,10 @@ export default function TodoList() {
 
 
 	return (
-		<div className="max-w-xl mx-auto p-4">
+		<div className="max-w-xl mx-auto p-4 bg-[#FCF8FE] rounded shadow space -y-4 text-black mt-10">
 			<h1 className="text-2xl font-semibold mb-4">Todo List</h1>
 
-			<form onSubmit={addTodo} className="mb-4 flex gap-2">
+			<form onSubmit={addTodo} className="mb-4 flex gap-4">
 				<Input
 					ref={inputRef}
 					placeholder="What needs doing?"
@@ -87,7 +89,7 @@ export default function TodoList() {
 					onChange={(e) => setText(e.target.value)}
 					aria-label="New todo"
 				/>
-				<Button type="submit" disabled={!text.trim()}>
+				<Button type="submit" disabled={!text.trim()} className="rounded bg-black hover:bg-[#69686D] text-[#FCF8FE]">
 					Add
 				</Button>
 			</form>
@@ -127,7 +129,7 @@ export default function TodoList() {
 
 			<div className="mt-4 flex items-center justify-between">
 				<div className="text-sm">{todos.filter((t) => !t.completed).length} left</div>
-				<div className="flex gap-2">
+				<div className="flex gap-1">
 					<Button variant="outline" onClick={() => setTodos((t) => t.map((x) => ({ ...x, completed: true })))}>
 						Mark all done
 					</Button>
