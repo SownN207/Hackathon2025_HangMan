@@ -71,9 +71,10 @@ export default function TodoList() {
 
   return (
     <div
-      className="max-w-xl mx-auto p-4 rounded-lg shadow-md"
+      className="w-full h-screen p-8 overflow-y-auto"
       style={{ backgroundColor: "#FCF8EF" }}
     >
+      
       <h1 className="text-2xl font-semibold mb-4">Todo List</h1>
 
       {/* Animated Progress Tracker */}
