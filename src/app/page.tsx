@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react"
-import { LoginForm } from "~/components/login"
+import { LoginForm } from "~/component_login/login"
 import Mainpage from "~/app/mainpage"
 
 export default function HomePage() {

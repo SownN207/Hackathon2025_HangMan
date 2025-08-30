@@ -3,9 +3,9 @@
 import type React from "react"
 import { useState } from "react"
 import { checkCredentials, ADMIN_LOG } from "~/lib/auth"
-import { Input } from "~/components/ui/input"
-import { Button } from "~/components/ui/button"
-import { Label } from "~/components/ui/label"
+import { Input } from "~/component_login/ui/input"
+import { Button } from "~/component_login/ui/button"
+import { Label } from "~/component_login/ui/label"
 import {
   Card,
   CardAction,
@@ -14,7 +14,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "~/components/ui/card"
+} from "~/component_login/ui/card"
 
 interface LoginFormProps {
   onLogin: () => void
