@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface PostProps {
   friend: string;
   name: string;
@@ -11,7 +13,7 @@ export default function Posts({ friend, name, image }: PostProps) {
     <div className="w-full rounded-xl border bg-white shadow-sm overflow-hidden">
       {/* Header */}
       <div className="flex items-center gap-3 p-4">
-        <img
+        <Image 
           src={friend}
           alt={name}
           className="w-12 h-12 rounded-full border"
@@ -23,7 +25,7 @@ export default function Posts({ friend, name, image }: PostProps) {
       </div>
 
       {/* Post image */}
-      <img src={image} alt="" className="w-full object-cover" />
+      <Image  src={image} alt="" className="w-full object-cover" />
 
       {/* Footer */}
       <div className="p-4 text-gray-600 text-sm">
