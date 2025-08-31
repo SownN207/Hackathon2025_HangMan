@@ -1,14 +1,22 @@
+"use client"
+
+import { useState } from "react"
+import { LoginForm } from "~/components/login/login"
+import Homepage from "~/app/announcement/page"
+
 export default function HomePage() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const handleLogin = () => {
+    setIsLoggedIn(true)
+  }
+
+  if (isLoggedIn) {
+    return <Homepage />
+  }
   return (
-    <div>
-      <div>
-        <h1 className="text-2xl font-bold mb-4 p-4">Home</h1>
-        <hr className="border-gray-300 mb-4" />
-      </div>
-      
-      <div>
-        <p>Welcome to the Hangman Home page!</p>
-      </div>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+      <LoginForm onLogin={handleLogin} />
+    </main>
   );
 }

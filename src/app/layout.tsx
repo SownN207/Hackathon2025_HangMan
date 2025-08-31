@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} h-screen`}>
       <body className="flex h-full">
-        <aside className="w-64 bg-gray-100 p-4 sticky top-0 h-screen">
+        <aside className="w-64 bg-background p-4 sticky top-0 h-screen">
           <Sidebar />
         </aside>
         <main className="flex-1 h-full">{children}</main>
