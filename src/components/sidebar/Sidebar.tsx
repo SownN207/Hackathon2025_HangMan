@@ -49,7 +49,7 @@ export function SidebarComponent() {
             className={`text-gray-700 hover:bg-blue-100 rounded-lg ${
               pathname === "/" ? "bg-blue-200 text-blue-800 font-semibold" : ""
             }`}
-            open={pathname === "/announcement" || pathname === "/events" || pathname === "/"}
+            open={pathname === "/announcement" || pathname === "/events" || pathname === "/" || pathname === "/question"}
           >
             <SidebarItem
               href="/announcement"
@@ -68,6 +68,15 @@ export function SidebarComponent() {
               }`}
             >
               Events
+            </SidebarItem>
+            <SidebarItem
+              href="/questions"
+              className={` text-sm text-gray-700 hover:bg-blue-100 rounded-lgm ${
+                pathname === "/questions"
+                  ? "bg-blue-200 text-blue-800 font-medium rounded-md" : ""
+              }`}
+            >
+              Questions
             </SidebarItem>
           </SidebarCollapse>
 
