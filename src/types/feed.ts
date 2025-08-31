@@ -15,4 +15,3 @@ interface PostsProps {
   name: string;    // Friend’s name
   image: string;   // URL of post image
 }
-

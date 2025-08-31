@@ -39,7 +39,7 @@ export function SidebarComponent() {
   return (
     <Sidebar
       aria-label="Main navigation sidebar"
-      className="bg-white w-56 h-full border-r border-gray-200 shadow-md"
+      className="bg-yellow-500 w-56 h-full border-r border-grey-00 shadow-md"
     >
       <SidebarItems>
         <SidebarItemGroup>
