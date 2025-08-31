@@ -1,5 +1,3 @@
-"use client";
-
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
