@@ -17,7 +17,7 @@ const Feed: React.FC<FeedProps> = ({ posts }) => {
             friend={post.friend}
             name={post.name}
             image={post.image}
-             description={post.description}
+            description={post.description}
           />
         ))}
     </div>

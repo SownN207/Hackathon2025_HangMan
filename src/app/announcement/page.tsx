@@ -17,16 +17,17 @@ const posts = [
   // add more posts
 ];
 
-
 export default function HomePage() {
   return (
-    <div className="p-4 h-screen w-screen">
-      <h1 className="text-2xl font-bold mb-4">Home</h1>
-      <hr className="border-gray-300 mb-6" />
+    <div className="flex flex-col h-screen w-screen">
+      <h1 className="text-3xl font-bold tracking-tight text-foreground lg:pl-5">Home</h1>
+      <p className="mt-2 text-muted-foreground lg:pl-5">Stay connected with your community</p>
       <main className="flex-1 flex justify-center items-start">
         <Feed posts={posts} />
       </main>
     </div>
   );
 }
+
+
 
